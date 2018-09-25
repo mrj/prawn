@@ -78,7 +78,7 @@ module Prawn
     def create_stamp(name, &block)
       dictionary = create_stamp_dictionary(name)
 
-      state.page.stamp_stream(dictionary, &block)
+      float { state.page.stamp_stream(dictionary, &block) }
     end
 
     private
